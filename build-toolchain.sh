@@ -430,6 +430,7 @@ if [ "x$skip_native_build" != "xyes" ] ; then
         --disable-libquadmath \
         --disable-libssp \
         --disable-libstdcxx-pch \
+        --disable-libstdcxx-verbose \
         --disable-nls \
         --disable-shared \
         --disable-threads \
