@@ -34,7 +34,7 @@ jobs:
       run: ./build-prerequisites.sh --skip_steps=mingw32
 
     - name: Build toolchain
-      run: ./build-toolchain.sh --skip_steps=mingw32,gdb-with-python,howto,manual
+      run: ./build-toolchain.sh --skip_steps=mingw32,gdb-with-python,howto,manual,package_sources
 
     - name: Upload
       if: github.event_name == 'release'
