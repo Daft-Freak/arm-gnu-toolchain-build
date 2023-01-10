@@ -21,6 +21,12 @@ jobs:
     - name: Install deps
       run: sudo apt update && sudo apt -y install build-essential autoconf autogen bison dejagnu flex flip gawk git gperf gzip nsis openssh-client p7zip-full perl python-dev libisl-dev scons tcl texinfo tofrodos wget zip texlive texlive-extra-utils libncurses5-dev
 
+    # grab the sources from the original package
+    - run: |
+        wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-src.tar.bz2
+        tar xf gcc-*.tar.bz2
+        mv gcc-*/src .
+
     - name: Install sources
       run: ./install-sources.sh
 
