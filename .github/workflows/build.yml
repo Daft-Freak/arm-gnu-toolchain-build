@@ -25,7 +25,7 @@ jobs:
     - run: |
         wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-src.tar.bz2
         tar xf gcc-*.tar.bz2
-        mv gcc-*/src .
+        mv gcc-*/src gcc-*/*.txt .
 
     - name: Install sources
       run: ./install-sources.sh
